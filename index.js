@@ -9,6 +9,10 @@ connectDB();
 const app = express();
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Welcome to Synergia Event Booking API 🚀");
+});
+
 // ✅ 1. Get all bookings
 app.get("/api/bookings", async (req, res) => {
   try {
